@@ -1,0 +1,55 @@
+/*https://auragradients.vercel.app/?gradient=violet-horizon*/
+/* Violet Horizon - Aura (aura) */
+
+/* Base color on BODY - blend modes composite against this */
+body {
+  background-color: #100e0b;
+}
+
+.aura-bg {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh; /* height must be explicit - absolute layers add none */
+  /* NO background-color - layers blend against body */
+}
+
+/* Layer 1 - hard-light */
+.aura-layer-1 {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0) 0%, rgba(99,102,241,0.9) 40%, rgb(255,255,255) 70%, rgb(216,180,254) 82%, rgb(244,114,182) 100%);
+  mix-blend-mode: hard-light;
+  filter: blur(100px); /* use 144px on desktop */
+  transform: translateZ(0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Layer 2 - soft-light */
+.aura-layer-2 {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0) 0%, rgba(99,102,241,0.9) 40%, rgb(255,255,255) 70%, rgb(216,180,254) 82%, rgb(244,114,182) 100%);
+  mix-blend-mode: soft-light;
+  filter: blur(200px); /* use 260px on desktop */
+  transform: translateZ(0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Layer 3 - normal */
+.aura-layer-3 {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(10,8,26) 0%, rgba(10,8,26,0.9) 15%, rgba(10,8,26,0.55) 35%, rgba(10,8,26,0.2) 60%, rgba(10,8,26,0) 100%);
+  mix-blend-mode: normal;
+  transform: translateZ(0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Content wrapper - keep it above the absolute layers */
+.aura-content {
+  position: relative;
+  z-index: 1;
+}

@@ -120,6 +120,7 @@ body {
         padding: 15px;
         gap: 5px;
         border-style: inset;
+        border-color: cyan;
          background:
     radial-gradient(
       ellipse 90% 75% at 50% 55%,

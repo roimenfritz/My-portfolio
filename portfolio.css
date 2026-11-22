@@ -28,6 +28,125 @@ body {
     #0b0b12;
 }
 
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 65px;
+    padding: 5px 5%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: #fff;
+}
+
+/* DESKTOP LINKS */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* HIDE MOBILE MENU ON DESKTOP */
+.mobile-menu {
+    display: none;
+}
+
+/* PHONE RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        padding: 5px 20px;
+    }
+
+    /* Hide desktop navigation */
+    .nav-links {
+        display: none;
+    }
+
+    /* Show hamburger menu */
+    .mobile-menu {
+        display:flex;
+        position: relative;
+    }
+
+    .mobile-menu summary {
+        list-style: none;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-menu summary::-webkit-details-marker {
+        display: none;
+    }
+
+    /* Hamburger icon */
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .menu-icon i {
+        display: block;
+        width: 23px;
+        height: 2px;
+        background:cyan;
+        border-radius: 2px;
+    }
+
+    /* Dropdown menu */
+    .mobile-links {
+        position: absolute;
+        top: 45px;
+        right: 0;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 15px;
+        gap: 5px;
+        border-style: inset;
+         background:
+    radial-gradient(
+      ellipse 90% 75% at 50% 55%,
+      rgba(35, 43, 220, 0.75),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 65% 45% at 50% 100%,
+      rgba(170, 105, 145, 0.18),
+      transparent 75%
+    ),
+    #0b0b12;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .mobile-links a {
+        text-decoration: none;
+        color: #222;
+        padding: 12px;
+        border-radius: 5px;
+    }
+
+    
+}
+
+
 .button {
   padding: 13px 24px;
   border: 1px solid #777cff;
